@@ -27,6 +27,8 @@ import { useCart } from '../../hooks/cart';
 
 import formatValue from '../../utils/formatValue';
 
+import FloatingCart from '../../components/FloatingCart';
+
 interface Product {
   id: string;
   title: string;
@@ -113,11 +115,13 @@ const Cart: React.FC = () => {
           )}
         />
       </ProductContainer>
-      <TotalProductsContainer>
+      {/* <TotalProductsContainer>
         <FeatherIcon name="shopping-cart" color="#fff" size={24} />
         <TotalProductsText>{`${totalItensInCart} itens`}</TotalProductsText>
         <SubtotalValue>{cartTotal}</SubtotalValue>
-      </TotalProductsContainer>
+      </TotalProductsContainer> */}
+
+      <FloatingCart />
     </Container>
   );
 };
